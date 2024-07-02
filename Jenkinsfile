@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-       PYTHON_HOME = 'C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps'
+       PYTHON_HOME = /usr/bin/python3
        PATH = "${env.PATH};${env.PYTHON_HOME}"
    }
     stages {
@@ -9,8 +9,8 @@ pipeline {
             steps {
                 script {
                     // Choisissez la commande en fonction de votre script
-                   bat "pip install pandas" // Installer les dépendances
-                   bat "python data_analysis.py" // Exécuter le script Python
+                   sh "pip install pandas" // Installer les dépendances
+                   sh "python data_analysis.py" // Exécuter le script Python
                 }
             }
         }
