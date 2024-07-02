@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
        PYTHON_HOME = 'C:\\Users\\andre\\AppData\\Local\\Microsoft\\WindowsApps'
-        PATH = "${env.PATH};${env.PYTHON_HOME}"
+       PATH = "${env.PATH};${env.PYTHON_HOME}"
    }
     stages {
         stage('Build') {
